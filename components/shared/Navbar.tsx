@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem } from "../ui/navbar-menu";
+import {Menu} from "../ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
+import { headerLinks } from "@/constants";
 
 export function NavbarDemo() {
   return (
@@ -22,34 +23,16 @@ function Navbar({ className }: { className?: string }) {
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
-        <ul className="md:flex flex-row gap-9 md:mt-4 mt-24 text-xl">
-          <MenuItem setActive={setActive} active={active} item="Men">
-            <Link href="/men" />
-            <div className="md:flex flex-col space-y-4 text-sm hidden">
-              <HoveredLink href="/web-dev">T-Shirts</HoveredLink>
-              <HoveredLink href="/interface-design">Jeans</HoveredLink>
-              <HoveredLink href="/seo">Joggers</HoveredLink>
-              <HoveredLink href="/branding">Shoes</HoveredLink>
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Women">
-          <Link href="/Women" />
-            <div className="md:flex flex-col space-y-4 text-sm hidden">
-              <HoveredLink href="/web-dev">T-Shirts</HoveredLink>
-              <HoveredLink href="/interface-design">Jeans</HoveredLink>
-              <HoveredLink href="/seo">Joggers</HoveredLink>
-              <HoveredLink href="/branding">Shoes</HoveredLink>
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Kids">
-          <Link href="/kids" />
-            <div className="md:flex flex-col space-y-4 text-sm hidden">
-              <HoveredLink href="/web-dev">T-Shirts</HoveredLink>
-              <HoveredLink href="/interface-design">Jeans</HoveredLink>
-              <HoveredLink href="/seo">Joggers</HoveredLink>
-              <HoveredLink href="/branding">Shoes</HoveredLink>
-            </div>
-          </MenuItem>
+        <ul className="md:flex flex-row gap-7 md:mt-4 mt-24 text-xl">
+          {headerLinks.map((link) => {
+            return (
+              <li>
+                <Link href={link.route}
+                   className={link.route === active ? 'text-primary-500' : ''}>{link.label}
+                </Link>
+              </li>
+            );   
+          })}
         </ul>
       </Menu>
     </div>

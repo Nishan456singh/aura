@@ -3,7 +3,10 @@ import HeroSection from '@/components/shared/HeroSection';
 export default function Home() {
   return (
     <main>
-     <HeroSection />
+      <HeroSection />
+      {/* <Search />
+      <CategoryFilter />
+      <TestimonialCards />   */}
     </main>
   );
 }
