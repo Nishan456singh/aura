@@ -28,7 +28,7 @@ function Navbar({ className }: { className?: string }) {
             return (
               <li>
                 <Link href={link.route}
-                   className={link.route === active ? 'text-primary-500' : ''}>{link.label}
+                   className={link.route === active ? 'text-primary-600' : ''}>{link.label}
                 </Link>
               </li>
             );   
