@@ -8,26 +8,32 @@ export const headerLinks = [
     {
         label: 'Home',
         route: '/',
+        role: 'any',
     },
     {
         label: 'Add Clothing',
         route: '/events/create',
+        role: 'admin',
     },
     {
         label: 'My Account',
         route: '/profile',
+        role: 'user',
     },
     {
         label: 'Men',
         route: '/men',
+        role: 'any',
     },
     {
         label: 'Women',
         route: '/women',
+        role: 'any',
     },
     {
         label: 'Kids',
         route: '/kids',
+        role: 'any',
     },
 ]
 

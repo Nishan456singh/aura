@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {Menu} from "../ui/navbar-menu";
+import { Menu } from "../ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { headerLinks } from "@/constants";
@@ -24,14 +24,14 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <ul className="md:flex flex-row gap-7 md:mt-4 mt-24 text-xl">
-          {headerLinks.map((link) => {
+          {headerLinks.map((link, index) => {
             return (
-              <li>
+              <li key={index}>
                 <Link href={link.route}
-                   className={link.route === active ? 'text-primary-500' : ''}>{link.label}
+                  className={link.route === active ? 'text-primary-500' : ''}>{link.label}
                 </Link>
               </li>
-            );   
+            );
           })}
         </ul>
       </Menu>
