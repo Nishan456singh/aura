@@ -9,7 +9,7 @@ const CreateEvent = () => {
   return (
     <>
       <section className="bg-black/[0.1] bg-cover bg-center py-5 md:py-10">
-        <h3 className="wrapper h3-bold text-center sm:text-left">Add New Item</h3>
+        <h3 className="wrapper h3-bold text-center sm:text-left">Create New Item</h3>
       </section>
 
       <div className="wrapper my-8">

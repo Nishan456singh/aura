@@ -20,10 +20,10 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
-        <ul className="md:flex flex-row gap-7 md:mt-4 mt-24 text-xl">
+        <ul className="md:flex flex-row gap-8 md:mt-4 mt-24 text-xl">
           {headerLinks.map((link, index) => {
             return (
               <li key={index}>
