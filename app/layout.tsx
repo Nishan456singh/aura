@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "aura",
   description: "Clothing brand",
   icons: {
-    icon: "/assets/images/logo.png",
+    icon: "/assets/images/logo.svg",
   }
 
 };
