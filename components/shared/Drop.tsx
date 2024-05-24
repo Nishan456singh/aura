@@ -22,12 +22,12 @@ import { Input } from '../ui/input'
 import { createCategory, getAllCategories } from '@/lib/actions/category.actions'
 
 
-type DropdownProps = {
+type DropProps = {
     value: string,
     onChangeHandler: () => void
 }
 
-const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
+const Drop = ({ value, onChangeHandler }: DropProps) => {
     const [categories, setCategories] = useState<ICategory[]>([])
     const [newCategory, setNewCategory] = useState('');
 
@@ -87,4 +87,4 @@ useEffect(() => {
     )
 }
 
-export default Dropdown
+export default Drop
