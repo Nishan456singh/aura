@@ -111,7 +111,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input placeholder="title" {...field} className="input-field" />
+                  <Input placeholder="Title" {...field} className="input-field" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -162,7 +162,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
             />
         </div>
 
-        {/* <div className="flex flex-col gap-5 md:flex-row">
+        <div className="flex flex-col gap-5 md:flex-row">
           <FormField
               control={form.control}
               name="location"
@@ -217,8 +217,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                   <FormMessage />
                 </FormItem>
               )}
-            /> */}
-{/*         
+            />       
           <FormField
               control={form.control}
               name="endDateTime"
@@ -249,7 +248,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                 </FormItem>
               )}
             />
-        </div> */}
+        </div> 
 
         <div className="flex flex-col gap-5 md:flex-row">
             <FormField
@@ -293,7 +292,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                 </FormItem>
               )}
             />   
-           {/* <FormField
+            <FormField
               control={form.control}
               name="url"
               render={({ field }) => (
@@ -314,7 +313,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                   <FormMessage />
                 </FormItem>
               )}
-            /> */}
+            />
         </div>
 
 
